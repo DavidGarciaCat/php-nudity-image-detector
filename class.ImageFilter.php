@@ -26,14 +26,14 @@ class ImageFilter
 {
 
                               #R  G  B
-    var $colorA = 7944996;     #79 3B 24
-    var $colorB = 16696767;    #FE C5 BF
+    public $colorA = 7944996;     #79 3B 24
+    public $colorB = 16696767;    #FE C5 BF
 
 
-    var $arA = array();
-    var $arB = array();
+    public $arA = array();
+    public $arB = array();
     
-    function ImageFilter()
+    public function ImageFilter()
     {
         $this->arA['R'] = ($this->colorA >> 16) & 0xFF;
         $this->arA['G'] = ($this->colorA >> 8) & 0xFF;
@@ -44,7 +44,7 @@ class ImageFilter
         $this->arB['B'] = $this->colorB & 0xFF;
     }
     
-    function GetScore($image)
+    public function GetScore($image)
     {
         $x = 0;
         $y = 0;
@@ -89,7 +89,7 @@ class ImageFilter
         return $score;
     }
     
-    function GetScoreAndFill($image, $outputImage)
+    public function GetScoreAndFill($image, $outputImage)
     {
         $x = 0;
         $y = 0;
@@ -139,7 +139,7 @@ class ImageFilter
         return $score;
     }
     
-    function _GetImageResource($image, &$x, &$y)
+    public function _GetImageResource($image, &$x, &$y)
     {
         $info = GetImageSize($image);
         
