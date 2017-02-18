@@ -13,30 +13,30 @@ $session_id='1'; //$session id
 
 <script type="text/javascript" >
  $(document).ready(function() { 
-		
-            $('#photoimg').on('change', function()			{ 
-			           //$("#preview").html('');
-			    
-				$("#imageform").ajaxForm({target: '#preview', 
-				     beforeSubmit:function(){ 
-					
-					
-					$("#imageloadstatus").show();
-					 $("#imageloadbutton").hide();
-					 }, 
-					success:function(){ 
-				
-					 $("#imageloadstatus").hide();
-					 $("#imageloadbutton").show();
-					}, 
-					error:function(){ 
-					
-					 $("#imageloadstatus").hide();
-					$("#imageloadbutton").show();
-					} }).submit();
-					
-		
-			});
+        
+            $('#photoimg').on('change', function()          { 
+                       //$("#preview").html('');
+                
+                $("#imageform").ajaxForm({target: '#preview', 
+                     beforeSubmit:function(){ 
+                    
+                    
+                    $("#imageloadstatus").show();
+                     $("#imageloadbutton").hide();
+                     }, 
+                    success:function(){ 
+                
+                     $("#imageloadstatus").hide();
+                     $("#imageloadbutton").show();
+                    }, 
+                    error:function(){ 
+                    
+                     $("#imageloadstatus").hide();
+                    $("#imageloadbutton").show();
+                    } }).submit();
+                    
+        
+            });
         }); 
 </script>
 
@@ -65,9 +65,9 @@ font-size:12px
 
 <div style="width:600px">
 
-	<div id='preview'>
-	</div>
-	
+    <div id='preview'>
+    </div>
+    
 
 
 <form id="imageform" method="post" enctype="multipart/form-data" action='ajaximage.php'>
